@@ -35,13 +35,16 @@ if (!CUSTOM_TAGS) {
     'before' => array(),
     'user' => array(),
     'computer' => array(),
+    'workdir' => array(),
     'style' => array(),
     'width' => array(),
   );
   //Allow plugin use in comments
   $allowedtags['pre'] = array(
+    'before' => array(),
     'user' => array(),
     'computer' => array(),
+    'workdir' => array(),
     'escaped' => array(),
   );
 }
@@ -88,8 +91,10 @@ function wp_terminal_highlight($match)
     $user = $user ? $user : "user";
     $computer = trim($match[3]);
     $computer = $computer ? $computer : "computer";
-    $prompt = $before.$user."@".$computer.":$ ";
-    $code = $match[4];
+    $workdir = trim($match[4]);
+    $workdir = $workdir ? $workdir : "~";
+    $prompt = $before.$user."@".$computer.":".$workdir."$ ";
+    $code = $match[5];
     $commands =  wp_terminal_split_commands($code);
 
     $output = "\n<div class=\"wp-terminal\">";
@@ -110,7 +115,7 @@ function wp_terminal_highlight($match)
 function wp_terminal_before_filter($content)
 {
     return preg_replace_callback(
-        "/\s*<pre id=[\"']terminal[\"']\s?(?:before=[\"']([()\w-]*)[\"']|user=[\"']([\w-]*)[\"']|computer=[\"']([\w-]*)[\"']|\s?)+>(.*)<\/pre>\s*/siU",
+        "/\s*<pre id=[\"']terminal[\"']\s?(?:before=[\"']([()\w-]*)[\"']|user=[\"']([\w-]*)[\"']|computer=[\"']([\w-]*)[\"']||workdir=\"(.*?)\"|\s?)+>(.*)<\/pre>\s*/siU",
         "wp_terminal_substitute",
         $content
     );
