@@ -4,7 +4,7 @@ Plugin Name: WP-Terminal-2
 Plugin URI: http://0pointer.com.ar/wp-terminal
 Description: WP-Terminal generates a terminal-like box around your terminal commands. Wrap terminal blocks with <code>&lt;pre id="terminal" user="username" computer="computername"&gt;</code> and <code>&lt;/pre&gt;</code> being <code>user</code> and <code>computer</code> optional.
 Author: Mariano Simone, Jeremy Plack
-Version: 0.3.0
+Version: 0.3.2
 Author URI: http://0pointer.com.ar
 */
 

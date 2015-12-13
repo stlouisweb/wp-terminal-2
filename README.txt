@@ -4,7 +4,7 @@ Donate link: http://0pointer.com.ar
 Tags: terminal, unix, console, command, linux
 Requires at least: 2.0
 Tested up to: 4.4
-Stable tag: 0.2.1
+Stable tag: 0.3.2
 
 WP-Terminal provides a terminal-like box for embedding terminal commands within pages or posts.
 WP-Terminal-2 extends WP-Terminal's functionality with before and workdir tags, to add text before the prompt
@@ -75,6 +75,12 @@ Wrap terminal blocks with `<pre id="terminal" user="username" computer="computer
     </pre>
 
 == Changelog ==
+**0.3.2**: Added workdir tag
+
+**0.3.1**: Added github documentation
+
+**0.3.0**: Added before tag
+
 **0.2.1**: Replacing [prompt] keyword by the prompt and highlighting the prompt in bold (thanks to Almir Mendes (m3nd3s@gmail.com) and rudson (rudsonalves@rra.etc.br))
 
 **0.2**: Added multiline commands
