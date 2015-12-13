@@ -12,5 +12,8 @@
  margin-top:10px;
  text-align:left;
  line-height:115%;
- padding:10px 10px 10px 50px
+ padding:10px 10px 10px 50px;
+ word-break: normal;
+ overflow: scroll;
+ white-space: nowrap;
 }
