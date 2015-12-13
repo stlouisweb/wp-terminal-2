@@ -110,7 +110,7 @@ function wp_terminal_highlight($match)
 function wp_terminal_before_filter($content)
 {
     return preg_replace_callback(
-        "/\s*<pre id=[\"']terminal[\"']\s?(?:before=[\"']([\w-]*)[\"']|user=[\"']([\w-]*)[\"']|computer=[\"']([\w-]*)[\"']|\s?)+>(.*)<\/pre>\s*/siU",
+        "/\s*<pre id=[\"']terminal[\"']\s?(?:before=[\"']([()\w-]*)[\"']|user=[\"']([\w-]*)[\"']|computer=[\"']([\w-]*)[\"']|\s?)+>(.*)<\/pre>\s*/siU",
         "wp_terminal_substitute",
         $content
     );
