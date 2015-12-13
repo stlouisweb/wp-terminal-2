@@ -51,7 +51,7 @@ if (!CUSTOM_TAGS) {
 
 function wp_terminal_head()
 {
-  $css_url = get_bloginfo("wpurl") . "/wp-content/plugins/wp-terminal/style/wp-terminal.css";
+  $css_url = get_bloginfo("wpurl") . "/wp-content/plugins/wp-terminal-2/style/wp-terminal.css";
   if (file_exists(TEMPLATEPATH . "/wp-terminal.css"))
   {
     $css_url = get_bloginfo("template_url") . "/wp-terminal.css";
