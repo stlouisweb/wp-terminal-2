@@ -6,5 +6,7 @@ and add a working directory between the computer name and '$'.
 
 ## Basic Usage
 
-Wrap terminal blocks with `<pre id="terminal" before="optional before text" user="username" computer="computername" workdir="optional working directory">` and `</pre>`, being user and computer optional ("user" and "computer" will be shown if you don't provide them, by default no before text is displayed and the working directory is shown as ~).  [More usage
+Wrap terminal blocks with `<pre id="terminal" before="optional before text" user="username" computer="computername" workdir="optional working directory">` and `</pre>`.
+
+before, user, computer and workdir are optional attributes, "user" and "computer" will be shown if you don't provide them, by default no before text is displayed and the working directory is shown as ~.  [More usage
 examples](http://wordpress.org/extend/plugins/wp-terminal/other_notes/)
